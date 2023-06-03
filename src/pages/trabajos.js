@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function Trabajos() {
   const [position, setPosition] = useState({
     x: "",
     y: "",
@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ELIHU STRASSER</title>
+        <title>TRABAJOS</title>
       </Head>
 
       <div className="preloader"></div>
@@ -147,73 +147,56 @@ export default function Home() {
             width={1000}
             height={1000}
             draggable="false"
-            src="/assets/img/sroll.svg"
+            src="assets/img/sroll.svg"
             alt="scroll"
             style={{ height: "auto", width: "auto" }}
           />
         </div>
         <div className="main-head">
-          <div id="headmove" style={{ opacity: "0" }}>
-            <div data-depth="0.2">
-              <div className="bg-right"></div>
+          <div id="headmove">
+            {/* <div data-depth="0.2" style={{ opacity: "0" }}>
+              <div className="bg-work"></div>
             </div>
-          </div>
-          <div id="headmovea">
-            <div
-              data-depth="0.2"
-              style={{
-                transform: `translate(${position.x * 0.15}px, 0px)`,
-              }}
-            >
-              <div className="bg-right"></div>
+            <div data-depth="0.3" style={{ opacity: "0" }}>
+              <div className="bg-work-2"></div>
+            </div> */}
+
+            <div data-depth="0.2">
+              <div
+                className="bg-work"
+                style={{
+                  background: "url(/imagenes/pro1.jpg) center center",
+                  backgroundSize: "cover",
+
+                  transform: `translate(${position.x * 0.05}px, ${
+                    position.y * 0.05
+                  }px)`,
+                }}
+              ></div>
+            </div>
+            <div data-depth="0.3">
+              <div
+                className="bg-work-2"
+                style={{
+                  background: "url(/imagenes/pro2.jpg) center center",
+                  backgroundSize: "cover",
+
+                  transform: `translate(${position.x * 0.02}px, ${
+                    position.y * 0.02
+                  }px)`,
+                }}
+              ></div>
             </div>
           </div>
           <div className="heading-text">
             <div className="heading-text-front">
-              <h1>ELIHU STRASSER</h1>
+              <h1 className="title">T R A B A J O S</h1>
             </div>
             <div className="heading-text-back">
-              <h1>ELIHU STRASSER</h1>
+              <h1 className="title">T R A B A J O S</h1>
             </div>
           </div>
         </div>
-
-        <section className="about">
-          <div className="container">
-            <div className="row centered">
-              <div className="col-lg-7">
-                <div
-                  className="img-about luxy-el"
-                  data-horizontal="1"
-                  data-speed-x="1"
-                >
-                  <Image
-                    width={1000}
-                    height={1000}
-                    className="img-fluid"
-                    src="/imagenes/4.jpeg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <div className="abt-text">
-                  <p>
-                    ¡Bienvenido/a a mi mundo visual! Soy Elihu Strasser,
-                    capturando momentos y emociones congeladas en el tiempo. Con
-                    enfoque creativo y atención al detalle, ofrezco servicios
-                    personalizados para retratos, paisajes y eventos especiales.
-                    Descubre mi portfolio y reserva una sesión para crear
-                    recuerdos duraderos.
-                  </p>
-                  <Link className="hover-target load-spiral" href="/trabajos">
-                    Explore mas
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section className="folio-content">
           <div className="container">
@@ -228,46 +211,38 @@ export default function Home() {
               <div className="col-md-6">
                 <div className="folio-item hover-target">
                   <div className="img-folio">
-                    <a
-                      className=""
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
                       <Image
                         width={1000}
                         height={1000}
                         className="img-fluid"
-                        src="/imagenes/32.jpeg"
+                        src="/imagenes/40.jpeg"
                         draggable="false"
                         alt=""
                       />
                     </a>
                   </div>
                   <div className="text-folio text-center">
-                    <h2 className="text-1">ESTUDIO</h2>
-                    <h2 className="text-2">ESTUDIO</h2>
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
                   </div>
                 </div>
                 <div className="folio-item hover-target">
                   <div className="img-folio">
-                    <a
-                      className=""
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
                       <Image
                         width={1000}
                         height={1000}
                         className="img-fluid"
-                        src="/imagenes/34.jpeg"
+                        src="/imagenes/26.jpeg"
                         draggable="false"
                         alt=""
                       />
                     </a>
                   </div>
                   <div className="text-folio text-center">
-                    <h2 className="text-1">ESTUDIO</h2>
-                    <h2 className="text-2">ESTUDIO</h2>
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
                   </div>
                 </div>
               </div>
@@ -275,11 +250,7 @@ export default function Home() {
               <div className="col-md-6">
                 <div className="folio-item hover-target">
                   <div className="img-folio">
-                    <a
-                      className=""
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
                       <Image
                         width={1000}
                         height={1000}
@@ -291,47 +262,107 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="text-folio text-center">
-                    <h2 className="text-1">ESTUDIO</h2>
-                    <h2 className="text-2">ESTUDIO</h2>
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
                   </div>
                 </div>
 
                 <div className="folio-item hover-target">
                   <div className="img-folio">
-                    <a
-                      className=""
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
                       <Image
                         width={1000}
                         height={1000}
                         className="img-fluid"
-                        src="/imagenes/39.jpeg"
+                        src="/imagenes/31.jpeg"
                         draggable="false"
                         alt=""
                       />
                     </a>
                   </div>
                   <div className="text-folio text-center">
-                    <h2 className="text-1">ESTUDIO</h2>
-                    <h2 className="text-2">ESTUDIO</h2>
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-12">
-                <Link
-                  href="/trabajos"
-                  className="next-project centered text-center load-spiral"
-                >
-                  <div className="col-md-12">
-                    <p>Ver</p>
-                    <h3>TODOS LOS PROYECTOS</h3>
+              <div className="col-md-6">
+                <div className="folio-item hover-target">
+                  <div className="img-folio">
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
+                      <Image
+                        width={1000}
+                        height={1000}
+                        className="img-fluid"
+                        src="/imagenes/4.jpeg"
+                        draggable="false"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                </Link>
+                  <div className="text-folio text-center">
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
+                  </div>
+                </div>
+                <div className="folio-item hover-target">
+                  <div className="img-folio">
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
+                      <Image
+                        width={1000}
+                        height={1000}
+                        className="img-fluid"
+                        src="/imagenes/18.jpeg"
+                        draggable="false"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div className="text-folio text-center">
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="folio-item hover-target">
+                  <div className="img-folio">
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
+                      <Image
+                        width={1000}
+                        height={1000}
+                        className="img-fluid"
+                        src="/imagenes/1.jpeg"
+                        draggable="false"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div className="text-folio text-center">
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
+                  </div>
+                </div>
+
+                <div className="folio-item hover-target">
+                  <div className="img-folio">
+                    <a className="" href="#" onClick={(e) => e.preventDefault()}>
+                      <Image
+                        width={1000}
+                        height={1000}
+                        className="img-fluid"
+                        src="/imagenes/41.jpeg"
+                        draggable="false"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div className="text-folio text-center">
+                    <h2 className="text-1">STUDIO</h2>
+                    <h2 className="text-2">STUDIO</h2>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
